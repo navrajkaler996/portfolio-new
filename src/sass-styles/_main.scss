@@ -1,0 +1,50 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+@import "./utilities/alignments.scss";
+
+@import "./layouts/header";
+
+@import "./components/box";
+@import "./components/circle";
+
+@import "./pages/home";
+@import "./pages/about";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 50%; //1 rem = 8px; 10px/16px = 62.5%
+
+  @include respond(tab-port) {
+    font-size: 62.5%; //1 rem = 12px; 12px/16px = 75%
+  }
+
+  @include respond(tab-land) {
+    font-size: 75%; //1 rem = 14px; 14px/16px =
+  }
+
+  @include respond(desktop) {
+    font-size: 87.5;
+  }
+
+  @include respond(large-desktop) {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

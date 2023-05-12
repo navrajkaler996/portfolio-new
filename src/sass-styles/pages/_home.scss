@@ -1,0 +1,57 @@
+.home {
+  height: 100vh;
+  position: relative;
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+
+  &__welcome-text {
+    &--1 {
+      font-size: 1.5em;
+      @include respond(tab-port) {
+        font-size: 2em;
+      }
+    }
+  }
+
+  //yellow background
+  &__background {
+    background-color: $primary-color-1;
+
+    &--top {
+      height: 50rem;
+      border-radius: 0 0 300px 300px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      @include respond(tab-port) {
+        height: 30rem;
+      }
+
+      @include respond(tab-land) {
+        height: 25rem;
+      }
+    }
+
+    &--bottom {
+      height: 10rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border-radius: 300px 300px 0 0;
+    }
+  }
+
+  &__bio {
+    padding: 2rem;
+    text-transform: none;
+  }
+}

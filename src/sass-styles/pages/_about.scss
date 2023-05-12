@@ -1,0 +1,12 @@
+.about {
+  height: 100vh;
+
+  &__background {
+    background-color: $primary-color-1;
+
+    &--1 {
+      height: 10rem;
+      border-radius: 0 0 300px 300px;
+    }
+  }
+}

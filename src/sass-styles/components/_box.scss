@@ -1,0 +1,40 @@
+.box-top {
+  height: auto;
+  width: 30rem;
+  box-shadow: $primary-box-shadow-2;
+  background-color: #fff;
+  padding: 2rem 4rem;
+
+  &--home {
+    position: absolute;
+    top: 75%;
+    left: 0;
+    right: 0;
+
+    @include respond(tab-port) {
+      width: 35rem;
+    }
+
+    @include respond(tab-land) {
+      top: 65%;
+    }
+
+    @include respond(large-desktop) {
+    }
+  }
+}
+
+.box-bottom {
+  height: auto;
+  width: 80vw;
+  background-color: #fff;
+  box-shadow: $primary-box-shadow-2;
+  font-size: 0.9em;
+
+  &--home {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,17 @@
+.circle {
+  height: 20rem;
+  width: 80vw;
+  background-color: #fff;
+  // border-radius: 50%;
+  box-shadow: $primary-box-shadow-2;
+
+  /* class if circle is needed to centered */
+  &--center {
+    margin: 0 auto;
+  }
+
+  @include respond(tab-port) {
+    height: 16rem;
+    width: 80vw;
+  }
+}
