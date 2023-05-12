@@ -2,6 +2,21 @@
   height: 100vh;
   position: relative;
 
+  &__typing-container {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    font-family: "Righteous", cursive;
+    font-size: 1.5em;
+
+    @include respond(tab-port) {
+      top: 25%;
+      font-size: 1.2em;
+    }
+  }
+
   &__text-container {
     display: flex;
     flex-direction: column;
@@ -9,6 +24,18 @@
     align-items: center;
     height: 100%;
     text-align: center;
+  }
+
+  &__typewriter::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 1.5em;
+    background-color: $primary-color-1;
+
+    animation: typing-animate 2s infinite;
   }
 
   &__welcome-text {
@@ -37,7 +64,7 @@
       }
 
       @include respond(tab-land) {
-        height: 25rem;
+        height: 35rem;
       }
     }
 

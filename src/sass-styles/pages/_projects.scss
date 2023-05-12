@@ -1,0 +1,44 @@
+$project-color-1: #590d22;
+$project-color-2: #a4133c;
+$project-color-3: #c9184a;
+
+.projects {
+  height: 100vh;
+  position: relative;
+
+  &__background {
+    background-color: $primary-color-1;
+
+    &--top {
+      height: 5rem;
+      border-radius: 0 0 300px 300px;
+    }
+
+    &--bottom {
+      height: 5rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border-radius: 300px 300px 0 0;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 10rem);
+  }
+
+  &__image {
+    display: block;
+    border-radius: 4rem 4rem 0 0;
+  }
+
+  &__image-description {
+    width: 320px;
+    height: 325px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 0 0 4rem 4rem;
+  }
+}

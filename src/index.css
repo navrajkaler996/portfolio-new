@@ -6,9 +6,20 @@
   margin: 0 auto;
 }
 
+@keyframes typing-animate {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 10%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .header {
   position: absolute;
-  top: 2%;
+  top: 1%;
   right: 2%;
   z-index: 10;
   height: 10rem;
@@ -55,11 +66,6 @@
     width: 35rem;
   }
 }
-@media (min-width: 56.25em) {
-  .box-top--home {
-    top: 65%;
-  }
-}
 .box-bottom {
   height: auto;
   width: 80vw;
@@ -95,6 +101,21 @@
   height: 100vh;
   position: relative;
 }
+.home__typing-container {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  font-family: "Righteous", cursive;
+  font-size: 1.5em;
+}
+@media (min-width: 37.5em) {
+  .home__typing-container {
+    top: 25%;
+    font-size: 1.2em;
+  }
+}
 .home__text-container {
   display: flex;
   flex-direction: column;
@@ -102,6 +123,16 @@
   align-items: center;
   height: 100%;
   text-align: center;
+}
+.home__typewriter::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  height: 1.5em;
+  background-color: #fce205;
+  animation: typing-animate 2s infinite;
 }
 .home__welcome-text--1 {
   font-size: 1.5em;
@@ -129,7 +160,7 @@
 }
 @media (min-width: 56.25em) {
   .home__background--top {
-    height: 25rem;
+    height: 35rem;
   }
 }
 .home__background--bottom {
@@ -144,15 +175,40 @@
   text-transform: none;
 }
 
-.about {
+.projects {
   height: 100vh;
+  position: relative;
 }
-.about__background {
+.projects__background {
   background-color: #fce205;
 }
-.about__background--1 {
-  height: 10rem;
+.projects__background--top {
+  height: 5rem;
   border-radius: 0 0 300px 300px;
+}
+.projects__background--bottom {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 300px 300px 0 0;
+}
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100% - 10rem);
+}
+.projects__image {
+  display: block;
+  border-radius: 4rem 4rem 0 0;
+}
+.projects__image-description {
+  width: 320px;
+  height: 325px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 0 0 4rem 4rem;
 }
 
 *,

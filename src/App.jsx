@@ -1,13 +1,13 @@
 import Header from "./layouts/Header";
-import About from "./pages/About";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
     <>
       <Header />
       <Home />
-      <About />
+      <Projects />
     </>
   );
 }
