@@ -1,7 +1,9 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 
-@import "./utilities/alignments.scss";
+@import "./utilities/alignments";
+
+@import "./abstracts/animations";
 
 @import "./layouts/header";
 
@@ -9,7 +11,7 @@
 @import "./components/circle";
 
 @import "./pages/home";
-@import "./pages/about";
+@import "./pages/projects";
 
 *,
 ::after,

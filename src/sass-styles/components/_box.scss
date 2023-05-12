@@ -15,10 +15,6 @@
       width: 35rem;
     }
 
-    @include respond(tab-land) {
-      top: 65%;
-    }
-
     @include respond(large-desktop) {
     }
   }
