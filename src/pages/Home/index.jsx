@@ -1,28 +1,31 @@
 import React, { useEffect, useRef, useState } from "react";
+import Typed from "typed.js";
 
 const text = ["React.js", "Node.js", "MongoDB", "Next.js", "Sass/Less"];
 
 const Home = () => {
   const ref = useRef();
-  // const [typingText, setTypingText] = useState();
-  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    setInterval(() => {
-      ref.current = text[index];
-      if (index + 1 === text.length) {
-        setIndex(0);
-      } else setIndex(index + 1);
-    }, 2000);
-  }, [ref.current]);
+    const typed = new Typed(ref.current, {
+      strings: ["React.js", "Node.js", "MongoDB", "Next.js", "Sass/Less"],
+      typeSpeed: 50,
+      backSpeed: 40,
+      loop: true,
+    });
 
-  console.log(ref.current);
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="home">
       <div className="home__background home__background--top">
         <div className="home__typing-container center-horizontal">
-          <h1>I work with</h1>
-          <h1 className="home__typewriter">{ref.current}</h1>
+          <span>I work with</span> <br />
+          <span ref={ref}></span>
         </div>
         <div className="box-top box-top--home center-horizontal">
           <div className="home__text-container">
