@@ -6,17 +6,6 @@
   margin: 0 auto;
 }
 
-@keyframes typing-animate {
-  0% {
-    width: 100%;
-  }
-  50% {
-    width: 10%;
-  }
-  100% {
-    width: 100%;
-  }
-}
 .header {
   position: absolute;
   top: 1%;
@@ -108,12 +97,12 @@
   right: 0;
   width: fit-content;
   font-family: "Righteous", cursive;
-  font-size: 1.5em;
+  font-size: 3em;
 }
 @media (min-width: 37.5em) {
   .home__typing-container {
     top: 25%;
-    font-size: 1.2em;
+    font-size: 2.5em;
   }
 }
 .home__text-container {
@@ -123,16 +112,6 @@
   align-items: center;
   height: 100%;
   text-align: center;
-}
-.home__typewriter::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  right: 0;
-  height: 1.5em;
-  background-color: #fce205;
-  animation: typing-animate 2s infinite;
 }
 .home__welcome-text--1 {
   font-size: 1.5em;
