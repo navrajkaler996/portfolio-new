@@ -40,20 +40,20 @@
     background-color: $primary-color-1;
 
     &--top {
-      height: 50rem;
+      height: 45%;
       border-radius: 0 0 300px 300px;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
 
-      @include respond(tab-port) {
-        height: 30rem;
-      }
+      // @include respond(tab-port) {
+      //   height: 30rem;
+      // }
 
-      @include respond(tab-land) {
-        height: 35rem;
-      }
+      // @include respond(tab-land) {
+      //   height: 35rem;
+      // }
     }
 
     &--bottom {

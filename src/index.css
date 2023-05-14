@@ -143,22 +143,12 @@
   background-color: #fce205;
 }
 .home__background--top {
-  height: 50rem;
+  height: 45%;
   border-radius: 0 0 300px 300px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-}
-@media (min-width: 37.5em) {
-  .home__background--top {
-    height: 30rem;
-  }
-}
-@media (min-width: 56.25em) {
-  .home__background--top {
-    height: 35rem;
-  }
 }
 .home__background--bottom {
   height: 10rem;
@@ -193,14 +183,14 @@
   height: 5rem;
   width: 100%;
   position: absolute;
-  bottom: 0;
   border-radius: 300px 300px 0 0;
 }
 .projects__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 15rem;
+  margin: 15rem 0;
+  position: relative;
 }
 .projects__image {
   display: block;
@@ -241,6 +231,73 @@
 }
 .projects__button-container button:last-of-type {
   margin-bottom: 0;
+}
+
+.skills {
+  height: 100vh;
+  position: relative;
+}
+.skills__background {
+  background-color: #fce205;
+}
+.skills__background--top {
+  height: 10rem;
+  border-radius: 0 0 300px 300px;
+  text-align: center;
+  position: relative;
+}
+.skills__background--top span {
+  font-family: "Righteous", cursive;
+  font-size: 3em;
+}
+.skills__background--bottom {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 300px 300px 0 0;
+}
+.skills__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 8rem;
+  grid-column-gap: 2rem;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-top: 6rem;
+}
+@media (min-width: 37.5em) {
+  .skills__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 56.25em) {
+  .skills__container {
+    grid-column-gap: 5rem;
+    grid-row-gap: 6rem;
+  }
+}
+@media (min-width: 75em) {
+  .skills__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 5rem;
+    grid-row-gap: 6rem;
+  }
+}
+.skills__image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills__image {
+  width: 5rem;
+}
+.skills__image-text {
+  margin-top: 2rem;
 }
 
 *,

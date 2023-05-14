@@ -55,7 +55,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      {/* <div className="projects__background projects__background--bottom"></div> */}
+      <div className="projects__background projects__background--bottom"></div>
     </div>
   );
 };
