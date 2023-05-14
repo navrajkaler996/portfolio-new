@@ -18,6 +18,13 @@
     @include respond(large-desktop) {
     }
   }
+
+  &--projects {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+  }
 }
 
 .box-bottom {
