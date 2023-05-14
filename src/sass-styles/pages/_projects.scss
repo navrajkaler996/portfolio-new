@@ -10,8 +10,15 @@ $project-color-3: #c9184a;
     background-color: $primary-color-1;
 
     &--top {
-      height: 5rem;
+      height: 10rem;
       border-radius: 0 0 300px 300px;
+      text-align: center;
+      position: relative;
+
+      & span {
+        font-family: "Righteous", cursive;
+        font-size: 3em;
+      }
     }
 
     &--bottom {
@@ -26,19 +33,56 @@ $project-color-3: #c9184a;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100% - 10rem);
+    margin-top: 15rem;
   }
 
   &__image {
     display: block;
     border-radius: 4rem 4rem 0 0;
+    box-shadow: $primary-box-shadow-2;
   }
 
   &__image-description {
+    box-shadow: $primary-box-shadow-2;
     width: 320px;
-    height: 325px;
+    height: auto;
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 0 0 4rem 4rem;
+    padding: 2rem;
+
+    & * {
+      margin-bottom: 2rem;
+    }
+
+    & p.project-name {
+      font-size: 1.4em;
+      font-family: "Righteous", cursive;
+    }
+
+    & p.project-tech {
+      font-size: 0.9em;
+      text-transform: none;
+    }
+
+    & ul.project-list {
+      text-transform: none;
+      list-style-type: none;
+      letter-spacing: 0.5px;
+    }
+
+    & ul.project-list li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__button-container {
+    padding: 1rem 0;
+
+    & button:last-of-type {
+      margin-bottom: 0;
+    }
+
+    margin-bottom: 0;
   }
 }
