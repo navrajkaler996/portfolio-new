@@ -37,7 +37,7 @@ const Skills = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.75, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}>
         <motion.div
           className="box-top box-top--projects center-horizontal"
@@ -49,7 +49,7 @@ const Skills = () => {
           }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.5, delay: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}>
           <span>Skills</span>
         </motion.div>
@@ -64,7 +64,7 @@ const Skills = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 1.25 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
         viewport={{ once: true }}>
         <div className="skills__image-container">
           <img src={React_icon} alt="html-icon" className="skills__image" />
@@ -128,7 +128,7 @@ const Skills = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.75, delay: 0.5 }}
+        transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}></motion.div>
     </div>
   );

@@ -17,6 +17,16 @@
   margin: 0 auto;
 }
 
+.center-vertical {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-top: 6rem;
+}
+
 .header {
   position: absolute;
   top: 1%;
@@ -298,6 +308,105 @@
 }
 .skills__image-text {
   margin-top: 2rem;
+}
+
+.experience {
+  height: 100vh;
+  position: relative;
+}
+.experience__background {
+  background-color: #fce205;
+}
+.experience__background--top {
+  height: 10rem;
+  border-radius: 0 0 300px 300px;
+  text-align: center;
+  position: relative;
+}
+.experience__background--top span {
+  font-family: "Righteous", cursive;
+  font-size: 3em;
+}
+.experience__background--bottom {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 300px 300px 0 0;
+}
+.experience__line {
+  height: 70vh;
+  width: 0.5rem;
+  background-color: #fce205;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 56.25em) {
+  .experience__line {
+    height: 0.5rem;
+    width: 90vw;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.experience__box {
+  width: 50vw;
+  height: auto;
+  background-color: #fce205;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 1rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  text-transform: none;
+  transition: all 0.2s;
+}
+@media (min-width: 56.25em) {
+  .experience__box {
+    transform: none;
+    height: auto;
+    width: auto;
+  }
+}
+.experience__box:hover {
+  cursor: pointer;
+  transform: scale(1.2) !important;
+}
+.experience__box span {
+  line-height: 4rem;
+  font-size: 1.2em;
+}
+@media (min-width: 56.25em) {
+  .experience__box span {
+    line-height: 3rem;
+  }
+}
+.experience__details {
+  position: absolute;
+  height: 100%;
+  width: 80vw;
+  background-color: #fce205;
+  transform: translateX(-50%);
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset !important;
+}
+@media (min-width: 56.25em) {
+  .experience__details {
+    height: 55vh !important;
+    transform: none;
+    margin: 0 auto !important;
+    right: 0;
+    left: 0;
+  }
+}
+.experience__details-cross {
+  position: absolute;
+  top: 2%;
+  right: 6%;
+  font-size: 2em;
+}
+.experience__details-cross:hover {
+  cursor: pointer;
 }
 
 *,
