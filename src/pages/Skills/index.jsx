@@ -40,6 +40,7 @@ const Skills = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}>
         <motion.div
+          ref={ref}
           className="box-top box-top--projects center-horizontal"
           variants={{
             hidden: { opacity: 0 },
@@ -56,7 +57,6 @@ const Skills = () => {
       </motion.div>
 
       <motion.div
-        ref={ref}
         className="skills__container"
         variants={{
           hidden: { opacity: 0 },

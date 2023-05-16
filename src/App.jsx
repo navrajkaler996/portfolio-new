@@ -1,4 +1,5 @@
 import Header from "./layouts/Header";
+import ContactMe from "./pages/ContactMe";
 import Education from "./pages/Education";
 import Experience from "./pages/Experience";
 import Home from "./pages/Home";
@@ -13,6 +14,7 @@ function App() {
       <Skills />
       <Experience />
       <Education />
+      <ContactMe />
       <Projects />
     </>
   );

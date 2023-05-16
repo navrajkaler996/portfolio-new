@@ -1,0 +1,104 @@
+.contactme {
+  height: 100vh;
+  position: relative;
+
+  &__background {
+    background-color: $primary-color-1;
+
+    &--top {
+      height: 10rem;
+      border-radius: 0 0 300px 300px;
+      text-align: center;
+      position: relative;
+
+      & span {
+        font-family: "Righteous", cursive;
+        font-size: 2em;
+      }
+    }
+
+    &--bottom {
+      height: 5rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border-radius: 300px 300px 0 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    height: auto;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem !important;
+
+    @include respond(tab-port) {
+      margin-top: 4rem !important;
+    }
+
+    & label {
+      text-transform: capitalize;
+    }
+
+    & p {
+      margin-bottom: 3rem;
+
+      @include respond(tab-port) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    // & p:first-of-type {
+    //   margin-bottom: 5rem;
+    //   @include respond(tab-port) {
+    //     margin-bottom: 1rem;
+    //   }
+    //   font-weight: 700;
+    //   font-size: 1.5em;
+    // }
+  }
+
+  &__input {
+    width: 80%;
+    outline: none;
+    height: 4rem;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+    border-radius: 10rem;
+
+    @include respond(tab-land) {
+      height: 3rem;
+      width: 50%;
+    }
+
+    &[type="submit"] {
+      background-color: $primary-color-1;
+      border-radius: 10rem;
+      border: none;
+      height: 5rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      @include respond(tab-land) {
+        height: 4rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__textarea {
+    height: 25rem;
+    padding-top: 1rem;
+    font-family: inherit;
+    border-radius: 3rem;
+    @include respond(tab-land) {
+      height: 12rem;
+    }
+  }
+}
