@@ -76,7 +76,9 @@ const Education = () => {
             <span className="education__flag-text">2023 </span>
           </div>
           <div className="education__text-container education__text-container--2">
-            <span className="education__text education__text--experience">Work Experience</span>
+            <span className="education__text education__text--experience">
+              Work Experience
+            </span>
           </div>
           <div className="education__flag">
             {" "}
