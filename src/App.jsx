@@ -1,4 +1,5 @@
 import Header from "./layouts/Header";
+import Education from "./pages/Education";
 import Experience from "./pages/Experience";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <Skills />
       <Experience />
+      <Education />
       <Projects />
     </>
   );

@@ -1,0 +1,159 @@
+.education {
+  height: 100vh;
+  position: relative;
+
+  &__background {
+    background-color: $primary-color-1;
+
+    &--top {
+      height: 10rem;
+      border-radius: 0 0 300px 300px;
+      text-align: center;
+      position: relative;
+
+      & span {
+        font-family: "Righteous", cursive;
+        font-size: 3em;
+      }
+    }
+
+    &--bottom {
+      height: 5rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border-radius: 300px 300px 0 0;
+    }
+  }
+
+  &__line {
+    left: 10%;
+    font-size: 0.9em;
+    @include respond(tab-land) {
+      top: 66%;
+      left: 50%;
+    }
+  }
+
+  &__flag {
+    display: flex;
+    width: fit-content;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__flag:last-of-type {
+    align-items: flex-end;
+  }
+
+  &__flag:first-of-type {
+    @include respond(tab-land) {
+      align-items: flex-start;
+    }
+  }
+
+  &__flag-circle {
+    display: block;
+    background-color: $primary-color-1;
+    width: 3rem;
+    height: 0.5rem;
+
+    @include respond(tab-land) {
+      width: 0.5rem;
+      height: 3rem;
+      margin-top: 6rem;
+    }
+  }
+
+  &__flag-text {
+    margin-left: 2rem;
+    line-height: 0.7;
+    font-weight: 700;
+    @include respond(tab-land) {
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+  }
+
+  &__text-container {
+    position: absolute;
+
+    width: 12rem;
+    height: 0.5rem;
+    background-color: $primary-color-1;
+
+    @include respond(tab-land) {
+      width: 0.5rem;
+      height: 12rem;
+    }
+
+    &--1 {
+      top: 10%;
+
+      @include respond(tab-land) {
+        top: auto;
+        bottom: 0;
+        left: 10%;
+      }
+    }
+
+    &--2 {
+      top: 30%;
+      @include respond(tab-land) {
+        top: auto;
+        bottom: 0;
+        left: 30%;
+      }
+    }
+    &--3 {
+      top: 50%;
+      @include respond(tab-land) {
+        top: auto;
+        bottom: 0;
+        left: 50%;
+      }
+    }
+    &--4 {
+      top: 70%;
+      @include respond(tab-land) {
+        top: auto;
+        bottom: 0;
+        left: 70%;
+      }
+    }
+    &--5 {
+      top: 90%;
+      @include respond(tab-land) {
+        top: auto;
+        bottom: 0;
+        left: 90%;
+      }
+    }
+  }
+
+  &__text {
+    position: absolute;
+    left: 100%;
+    transform: translate(10%, -50%);
+    width: 25rem;
+    text-align: center;
+    text-transform: none;
+
+    @include respond(tab-land) {
+      width: 15rem;
+      transform: translate(-50%, -120%);
+    }
+    & span {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &--experience {
+      transform: translate(-50%, -250%);
+      font-weight: 700;
+    }
+  }
+}
