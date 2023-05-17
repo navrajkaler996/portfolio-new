@@ -25,7 +25,7 @@ $project-color-3: #c9184a;
       height: 5rem;
       width: 100%;
       position: absolute;
-
+      bottom: 0;
       border-radius: 300px 300px 0 0;
     }
   }
@@ -35,25 +35,50 @@ $project-color-3: #c9184a;
     justify-content: center;
     margin: 15rem 0;
     position: relative;
+
+    &--desktop {
+      display: none;
+      @include respond(tab-land) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    &--mobile {
+      @include respond(tab-land) {
+        display: none;
+      }
+    }
   }
 
   &__image {
     display: block;
     border-radius: 4rem 4rem 0 0;
-    box-shadow: $primary-box-shadow-2;
+
+    &--desktop {
+      border-radius: 4rem 0 0 4rem;
+    }
   }
 
   &__image-description {
-    box-shadow: $primary-box-shadow-2;
+    // box-shadow: $primary-box-shadow-2;
     width: 320px;
     height: auto;
-    border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 0 0 4rem 4rem;
     padding: 2rem;
 
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
     & * {
       margin-bottom: 2rem;
+
+      @include respond(tab-land) {
+        margin-bottom: 0;
+      }
     }
 
     & p.project-name {
@@ -64,6 +89,10 @@ $project-color-3: #c9184a;
     & p.project-tech {
       font-size: 0.9em;
       text-transform: none;
+
+      @include respond(tab-land) {
+        font-size: 0.8em;
+      }
     }
 
     & ul.project-list {
@@ -75,6 +104,42 @@ $project-color-3: #c9184a;
     & ul.project-list li {
       margin-bottom: 0.5rem;
     }
+
+    &--desktop {
+      border-radius: 0 4rem 4rem 0;
+      border-top: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      border-left: 0;
+    }
+  }
+
+  &__details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 4rem;
+
+    width: 320px;
+    background-color: $primary-color-1;
+
+    box-shadow: $primary-box-shadow-2 !important;
+
+    &--desktop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      border-radius: 4rem;
+
+      background-color: $primary-color-1;
+
+      box-shadow: $primary-box-shadow-2 !important;
+      height: 363px !important;
+    }
   }
 
   &__button-container {
@@ -82,6 +147,17 @@ $project-color-3: #c9184a;
 
     & button:last-of-type {
       margin-bottom: 0;
+    }
+
+    & button {
+      @include respond(tab-land) {
+        margin-bottom: 2rem;
+        height: 4rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     margin-bottom: 0;

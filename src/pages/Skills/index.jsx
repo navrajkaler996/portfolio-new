@@ -25,7 +25,7 @@ const Skills = () => {
   }, [isInView]);
 
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <motion.div
         className="skills__background skills__background--top"
         variants={{
@@ -128,7 +128,7 @@ const Skills = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 1.5, delay: 0.2 }}
         viewport={{ once: true }}></motion.div>
     </div>
   );

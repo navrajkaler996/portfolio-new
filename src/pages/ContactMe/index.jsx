@@ -74,8 +74,9 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="contactme">
+    <div className="contactme" id="contactme">
       <motion.div
+        ref={ref}
         className="contactme__background contactme__background--top"
         variants={{
           hidden: { borderRadius: 0, height: "100vh" },
@@ -86,10 +87,9 @@ const ContactMe = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}>
         <motion.div
-          ref={ref}
           className="box-top box-top--projects center-horizontal"
           variants={{
             hidden: { opacity: 0 },
@@ -105,9 +105,17 @@ const ContactMe = () => {
         </motion.div>
       </motion.div>
       <ToastContainer />
-      <form
+      <motion.form
         ref={formRef}
-        className="contactme__container center-horizontal center-vertical">
+        className="contactme__container center-horizontal center-vertical"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.5, delay: 1 }}
+        viewport={{ once: true }}>
         {loader && (
           <BounceLoader color="#fce205" className=" center-horizontal" />
         )}
@@ -151,7 +159,7 @@ const ContactMe = () => {
             </p>
           </>
         )}
-      </form>
+      </motion.form>
 
       <motion.div
         className="contactme__background contactme__background--bottom"
@@ -161,7 +169,7 @@ const ContactMe = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 1.5, delay: 0.2 }}
         viewport={{ once: true }}></motion.div>
     </div>
   );
