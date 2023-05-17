@@ -19,6 +19,7 @@
     "react-spinners": "^0.13.8",
     "react-toastify": "^9.1.3",
     "sass": "^1.62.1",
+    "scroll-into-view": "^1.16.2",
     "typed.js": "^2.0.16"
   },
   "devDependencies": {

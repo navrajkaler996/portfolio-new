@@ -13,8 +13,9 @@ const Education = () => {
   }, [isInView]);
 
   return (
-    <div className="education">
+    <div className="education" id="education">
       <motion.div
+        ref={ref}
         className="education__background education__background--top"
         variants={{
           hidden: { borderRadius: 0, height: "100vh" },
@@ -25,10 +26,9 @@ const Education = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}>
         <motion.div
-          ref={ref}
           className="box-top box-top--projects center-horizontal"
           variants={{
             hidden: { opacity: 0 },
@@ -138,7 +138,7 @@ const Education = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 1.5, delay: 0.2 }}
         viewport={{ once: true }}></motion.div>
     </div>
   );

@@ -15,8 +15,9 @@ const Experience = () => {
   }, [isInView]);
 
   return (
-    <div className="experience">
+    <div className="experience" id="experience">
       <motion.div
+        ref={ref}
         className="experience__background experience__background--top"
         variants={{
           hidden: { borderRadius: 0, height: "100vh" },
@@ -27,10 +28,9 @@ const Experience = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}>
         <motion.div
-          ref={ref}
           className="box-top box-top--projects center-horizontal"
           variants={{
             hidden: { opacity: 0 },
@@ -156,7 +156,7 @@ const Experience = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 1.5, delay: 0.2 }}
         viewport={{ once: true }}></motion.div>
     </div>
   );

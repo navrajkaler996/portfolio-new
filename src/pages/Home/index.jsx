@@ -28,7 +28,7 @@ const Home = () => {
   }, [isInView]);
 
   return (
-    <div className="home">
+    <div className="home" id="home">
       <motion.div
         className="home__background home__background--top"
         variants={{
