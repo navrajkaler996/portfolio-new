@@ -37,9 +37,16 @@
 .header__navigation {
   display: none;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 56.25em) {
   .header__navigation {
-    display: block;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fce205;
+    padding-right: 1rem;
   }
 }
 .header__links {
@@ -112,6 +119,98 @@
     height: 16rem;
     width: 80vw;
   }
+}
+
+.hamburger {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hamburger:hover {
+  cursor: pointer;
+}
+@media (min-width: 56.25em) {
+  .hamburger {
+    display: none;
+  }
+}
+.hamburger__line {
+  display: block;
+  height: 0.2rem;
+  width: 60%;
+  background-color: #000;
+  transition: all 0.1s;
+}
+.hamburger__line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.2rem;
+  width: 60%;
+  background-color: #000;
+  position: absolute;
+  top: 35%;
+  transition: all 0.5s;
+}
+.hamburger__line::after {
+  content: "";
+  display: block;
+  height: 0.2rem;
+  width: 60%;
+  background-color: #000;
+  position: absolute;
+  bottom: 35%;
+  transition: all 0.5s;
+}
+.hamburger__line--clicked {
+  background-color: transparent;
+}
+.hamburger__line--clicked::before {
+  transform: rotate(135deg);
+  top: 50%;
+}
+.hamburger__line--clicked::after {
+  transform: rotate(-135deg);
+  bottom: 0;
+  bottom: 50%;
+}
+.hamburger__menu {
+  position: fixed;
+  width: auto;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  z-index: 10;
+  top: 12rem;
+  right: 0;
+  padding: 2rem 6rem;
+  background-color: #fce205;
+}
+@media (min-width: 56.25em) {
+  .hamburger__menu {
+    display: none;
+  }
+}
+.hamburger__links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.5em;
+}
+.hamburger__link {
+  margin-bottom: 2rem;
+}
+.hamburger__link:hover {
+  cursor: pointer;
 }
 
 .home {
