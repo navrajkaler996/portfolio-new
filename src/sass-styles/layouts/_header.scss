@@ -8,8 +8,15 @@
   &__navigation {
     display: none;
 
-    @include respond(tab-port) {
-      display: block;
+    @include respond(tab-land) {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: $primary-color-1;
+      padding-right: 1rem;
     }
   }
 

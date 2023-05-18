@@ -1,5 +1,7 @@
-import React from "react";
+import { useInView, useScroll } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 import scrollIntoView from "scroll-into-view";
+import Hamburger from "../../components/Hamburger";
 
 const Header = () => {
   const navigate = (id) => {
@@ -8,8 +10,10 @@ const Header = () => {
       time: 2000,
     });
   };
+
   return (
     <header className="header">
+      <Hamburger />
       <nav className="header__navigation">
         <ul className="header__links">
           <li className="header__link">About</li>

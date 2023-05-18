@@ -163,3 +163,39 @@ const Experience = () => {
 };
 
 export default Experience;
+
+{
+  /* <motion.div
+        className="hamburger__menu"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+          },
+        }}
+        initial="hidden"
+        animate={clicked ? "visible" : "hidden"}
+        transition={{ duration: 1, delay: 0.2 }}
+        viewport={{ once: true }}>
+        <ul className="hamburger__links">
+          <li className="hamburger__link">About</li>
+          <li className="hamburger__link" onClick={() => navigate("skills")}>
+            Skills
+          </li>
+          <li
+            className="hamburger__link"
+            onClick={() => navigate("experience")}>
+            Experience
+          </li>
+          <li className="hamburger__link" onClick={() => navigate("projects")}>
+            Projects
+          </li>
+          <li className="hamburger__link" onClick={() => navigate("education")}>
+            Education
+          </li>
+          <li className="hamburger__link" onClick={() => navigate("contactme")}>
+            Contact
+          </li>
+        </ul>
+      </motion.div> */
+}
