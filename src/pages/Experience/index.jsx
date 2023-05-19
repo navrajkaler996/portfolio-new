@@ -1,5 +1,6 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { transitions, variants } from "../../utils/framerMotion";
 
 const Experience = () => {
   const ref = useRef(null);
@@ -19,28 +20,17 @@ const Experience = () => {
       <motion.div
         ref={ref}
         className="experience__background experience__background--top"
-        variants={{
-          hidden: { borderRadius: 0, height: "100vh" },
-          visible: {
-            borderRadius: "0 0 300px 300px",
-            height: "10rem",
-          },
-        }}
+        variants={variants.otherBackgroundTop}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={transitions.otherBackgroundTop}
         viewport={{ once: true }}>
         <motion.div
           className="box-top box-top--projects center-horizontal"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-            },
-          }}
+          variants={variants.otherBox}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={transitions.otherBox}
           viewport={{ once: true }}>
           <span>Experience</span>
         </motion.div>
@@ -156,46 +146,10 @@ const Experience = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1.5, delay: 0.2 }}
+        transition={transitions.otherBackgroundBottom}
         viewport={{ once: true }}></motion.div>
     </div>
   );
 };
 
 export default Experience;
-
-{
-  /* <motion.div
-        className="hamburger__menu"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-          },
-        }}
-        initial="hidden"
-        animate={clicked ? "visible" : "hidden"}
-        transition={{ duration: 1, delay: 0.2 }}
-        viewport={{ once: true }}>
-        <ul className="hamburger__links">
-          <li className="hamburger__link">About</li>
-          <li className="hamburger__link" onClick={() => navigate("skills")}>
-            Skills
-          </li>
-          <li
-            className="hamburger__link"
-            onClick={() => navigate("experience")}>
-            Experience
-          </li>
-          <li className="hamburger__link" onClick={() => navigate("projects")}>
-            Projects
-          </li>
-          <li className="hamburger__link" onClick={() => navigate("education")}>
-            Education
-          </li>
-          <li className="hamburger__link" onClick={() => navigate("contactme")}>
-            Contact
-          </li>
-        </ul>
-      </motion.div> */
-}

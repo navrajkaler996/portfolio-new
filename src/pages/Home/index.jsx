@@ -1,6 +1,7 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import { transitions, variants } from "../../utils/framerMotion";
 
 const Home = () => {
   useEffect(() => {
@@ -31,16 +32,10 @@ const Home = () => {
     <div className="home" id="home">
       <motion.div
         className="home__background home__background--top"
-        variants={{
-          hidden: { borderRadius: 0, height: "100vh" },
-          visible: {
-            borderRadius: "0 0 300px 300px",
-            height: "45%",
-          },
-        }}
+        variants={variants.homeBackgroundTop}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.75, delay: 0.25 }}
+        transition={transitions.homeBackgroundTop}
         viewport={{ once: true }}>
         <motion.div
           className="home__typing-container center-horizontal"
@@ -73,13 +68,10 @@ const Home = () => {
       </motion.div>
       <motion.div
         className="home__background home__background--bottom"
-        variants={{
-          hidden: { borderRadius: 0, height: "100vh" },
-          visible: { borderRadius: "300px 300px 0 0", height: "10rem" },
-        }}
+        variants={variants.homeBackgroundBottom}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.75, delay: 0.25 }}
+        transition={transitions.homeBackgroundbottom}
         viewport={{ once: true }}>
         <motion.div
           className="box-bottom box-bottom--home center-horizontal"

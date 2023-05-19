@@ -12,6 +12,7 @@ import Typescript_icon from "../../assets/typescript.png";
 import Vite_icon from "../../assets/vite.png";
 import Webpack_icon from "../../assets/webpack.png";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { transitions, variants } from "../../utils/framerMotion";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -28,29 +29,18 @@ const Skills = () => {
     <div className="skills" id="skills">
       <motion.div
         className="skills__background skills__background--top"
-        variants={{
-          hidden: { borderRadius: 0, height: "100vh" },
-          visible: {
-            borderRadius: "0 0 300px 300px",
-            height: "10rem",
-          },
-        }}
+        variants={variants.otherBackgroundTop}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={transitions.skillBackgroundTop}
         viewport={{ once: true }}>
         <motion.div
           ref={ref}
           className="box-top box-top--projects center-horizontal"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-            },
-          }}
+          variants={variants.otherBox}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={transitions.otherBox}
           viewport={{ once: true }}>
           <span>Skills</span>
         </motion.div>
@@ -122,13 +112,10 @@ const Skills = () => {
 
       <motion.div
         className="skills__background skills__background--bottom"
-        variants={{
-          hidden: { borderRadius: 0, height: "100vh" },
-          visible: { borderRadius: "300px 300px 0 0", height: "5rem" },
-        }}
+        variants={variants.otherBackgroundBottom}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1.5, delay: 0.2 }}
+        transition={transitions.skillBackgroundBottom}
         viewport={{ once: true }}></motion.div>
     </div>
   );

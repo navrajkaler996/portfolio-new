@@ -33,8 +33,14 @@ $project-color-3: #c9184a;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 15rem 0;
-    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+
+    @include respond(tab-port) {
+    }
 
     &--desktop {
       display: none;
@@ -42,10 +48,14 @@ $project-color-3: #c9184a;
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin: 12rem 0;
       }
     }
 
     &--mobile {
+      // @include respond(tab-port) {
+      //   margin-bottom: 8rem;
+      // }
       @include respond(tab-land) {
         display: none;
       }
@@ -73,8 +83,16 @@ $project-color-3: #c9184a;
     border-left: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 
+    @include respond(tab-port) {
+      padding: 1rem 2rem;
+    }
+
     & * {
       margin-bottom: 2rem;
+
+      @include respond(tab-port) {
+        margin-bottom: 1rem;
+      }
 
       @include respond(tab-land) {
         margin-bottom: 0;
@@ -84,13 +102,16 @@ $project-color-3: #c9184a;
     & p.project-name {
       font-size: 1.4em;
       font-family: "Righteous", cursive;
+      @include respond(tab-port) {
+        font-size: 1em;
+      }
     }
 
     & p.project-tech {
       font-size: 0.9em;
       text-transform: none;
 
-      @include respond(tab-land) {
+      @include respond(tab-port) {
         font-size: 0.8em;
       }
     }
@@ -138,7 +159,7 @@ $project-color-3: #c9184a;
       background-color: $primary-color-1;
 
       box-shadow: $primary-box-shadow-2 !important;
-      height: 363px !important;
+      height: 315px !important;
     }
   }
 
@@ -152,6 +173,10 @@ $project-color-3: #c9184a;
     & button {
       @include respond(tab-land) {
         margin-bottom: 2rem;
+        height: 4rem;
+      }
+
+      @include respond(tab-port) {
         height: 4rem;
       }
 
