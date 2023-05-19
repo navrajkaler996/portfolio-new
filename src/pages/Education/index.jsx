@@ -1,5 +1,6 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
+import { transitions, variants } from "../../utils/framerMotion";
 
 const Education = () => {
   const ref = useRef(null);
@@ -17,28 +18,17 @@ const Education = () => {
       <motion.div
         ref={ref}
         className="education__background education__background--top"
-        variants={{
-          hidden: { borderRadius: 0, height: "100vh" },
-          visible: {
-            borderRadius: "0 0 300px 300px",
-            height: "10rem",
-          },
-        }}
+        variants={variants.otherBackgroundTop}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={transitions.otherBackgroundTop}
         viewport={{ once: true }}>
         <motion.div
           className="box-top box-top--projects center-horizontal"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-            },
-          }}
+          variants={variants.otherBox}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={transitions.otherBox}
           viewport={{ once: true }}>
           <span>Education</span>
         </motion.div>
@@ -132,13 +122,10 @@ const Education = () => {
 
       <motion.div
         className="education__background education__background--bottom"
-        variants={{
-          hidden: { borderRadius: 0, height: "100vh" },
-          visible: { borderRadius: "300px 300px 0 0", height: "5rem" },
-        }}
+        variants={variants.otherBackgroundBottom}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1.5, delay: 0.2 }}
+        transition={transitions.otherBackgroundBottom}
         viewport={{ once: true }}></motion.div>
     </div>
   );

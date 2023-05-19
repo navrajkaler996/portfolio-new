@@ -2,6 +2,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Project1Mobile from "../../assets/project__1--mobile.jpg";
 import Project1Desktop from "../../assets/project__1--desktop.png";
+import { transitions, variants } from "../../utils/framerMotion";
 
 const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,16 +24,10 @@ const Projects = () => {
       <motion.div
         ref={ref}
         className="projects__background projects__background--top"
-        variants={{
-          hidden: { borderRadius: 0, height: "100vh" },
-          visible: {
-            borderRadius: "0 0 300px 300px",
-            height: "10rem",
-          },
-        }}
+        variants={variants.otherBackgroundTop}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={transitions.otherBackgroundTop}
         viewport={{ once: true }}>
         <motion.div
           className="box-top box-top--projects center-horizontal"
@@ -44,7 +39,7 @@ const Projects = () => {
           }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={transitions.otherBox}
           viewport={{ once: true }}>
           <span>Projects</span>
         </motion.div>
@@ -52,10 +47,7 @@ const Projects = () => {
 
       <motion.div
         className="projects__container projects__container--mobile"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-        }}
+        variants={variants.otherBox}
         initial="hidden"
         animate={mainControls}
         transition={{ duration: 0.5, delay: 0.7 }}
@@ -228,13 +220,10 @@ const Projects = () => {
 
       <motion.div
         className="projects__background  projects__background--bottom"
-        variants={{
-          hidden: { borderRadius: 0, height: "100vh" },
-          visible: { borderRadius: "300px 300px 0 0", height: "5rem" },
-        }}
+        variants={variants.otherBackgroundBottom}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1.5, delay: 0.2 }}
+        transition={transitions.otherBackgroundBottom}
         viewport={{ once: true }}></motion.div>
     </div>
   );
